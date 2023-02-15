@@ -11,7 +11,17 @@ def favicon():
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+
+@app.route('/layout')
+def layout():
     return render_template('layout.html')
+
+
+@app.route('/login')
+def login():
+    return render_template('login.html')
 
 
 if __name__ == '__main__':
