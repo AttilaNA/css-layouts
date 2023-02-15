@@ -3,20 +3,83 @@
     box-sizing: border-box;
 }
 
-body > div.navbar > h1 {
-    text-align: center;
-    margin: auto;
-}
-
 div.navbar {
     position: sticky;
     top: 0px;
     background: beige;
     margin-top: -8px; /* Body user agent stylesheet has margin: 8px */
+    will-change: transform;
+}
+
+div.navbar > h1 {
+    text-align: center;
+    margin: auto;
+    padding: 10px 0px;
+}
+
+div.navbar > a.home {
+    position: fixed;
+    top: 14px;
+    left: 8px;
+    font-size: 20px;
+}
+
+div.navbar > a.login {
+    position: fixed;
+    top: 14px;
+    left: 68px;
+    font-size: 20px;
+}
+
+div.navbar > a.layout {
+    position: fixed;
+    top: 14px;
+    left: 128px;
+    font-size: 20px;
 }
 
 div.body {
     margin-left: 8px;
     margin-right: 8px;
+}
+
+div.body > div.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height:300px;
+}
+
+div.body > div.login > div.card {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 500px;
+    background: beige;
+    border-radius: 25px;
+
+}
+
+div.body > div.login > div.card > form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px 50px;
+}
+
+div.body > div.login > div.card > form > lable {
+    font-size: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+div.body > div.login > div.card > form > input {
+    line-height: 1.5;
+}
+
+div.body > div.login > div.card > form > button {
+    font-size: 16px;
+    margin: 20px auto 0px auto
 }
 
