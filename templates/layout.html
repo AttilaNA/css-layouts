@@ -6,12 +6,15 @@
     <title>CSS practice</title>
 </head>
 <body>
-    <div class="navbar"><h1>Layouts</h1></div>
+    <div class="navbar">
+        <h1>Layouts</h1>
+        <a class="home" href="/">Home</a>
+        <a class="login" href="login">Login</a>
+        <a class="layout" href="layout">Layout</a>
+    </div>
     <div class="body">
-<!--&lt;!&ndash;        For testing purpose:&ndash;&gt;-->
-<!--        {% for i in range(200) %}-->
-<!--            <div>Lines</div>-->
-<!--        {% endfor %}-->
+        {% block body %}{% endblock %}
+        {% block login %}{% endblock %}
     </div>
 </body>
 </html>
