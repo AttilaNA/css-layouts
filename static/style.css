@@ -1,4 +1,6 @@
 
+/*layout*/
+
 * {
     box-sizing: border-box;
 }
@@ -43,43 +45,71 @@ div.body {
     margin-right: 8px;
 }
 
-div.body > div.login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height:300px;
-}
+/*login*/
 
-div.body > div.login > div.card {
-    display: flex;
-    align-items: center;
-    height: 200px;
-    width: 500px;
+div.body > div.login {
     background: beige;
     border-radius: 25px;
-
+    margin: 50px auto 0 auto;
+    max-width: 500px;
 }
 
-div.body > div.login > div.card > form {
+div.body > div.login > form {
     display: flex;
-    flex: 1;
     flex-direction: column;
     padding: 20px 50px;
 }
 
-div.body > div.login > div.card > form > lable {
+div.body > div.login > form > lable {
     font-size: 20px;
     padding-bottom: 5px;
     padding-top: 5px;
 }
 
-div.body > div.login > div.card > form > input {
+div.body > div.login > form > input {
     line-height: 1.5;
 }
 
-div.body > div.login > div.card > form > button {
+div.body > div.login > form > button {
     font-size: 16px;
     margin: 20px auto 0px auto
 }
 
+/*home*/
+
+div.body > div.home {
+    display: grid;
+    grid-template-rows: repeat(5, 70px);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "one one one one one"
+        "two two four four four"
+        "two two four four four"
+        "two two four four four"
+        "three three three three three";
+    background: beige;
+    border-radius: 25px;
+    margin: 50px auto 0 auto;
+    padding: 50px;
+    max-width: 500px;
+}
+
+div.body > div.home > div.one {
+    background: yellow;
+    grid-area: one;
+}
+
+div.body > div.home > div.two {
+    background: red;
+    grid-area: two;
+}
+
+div.body > div.home > div.three {
+    background: chartreuse;
+    grid-area: three;
+}
+
+div.body > div.home > div.four {
+    background: cyan;
+    grid-area: four;
+}
